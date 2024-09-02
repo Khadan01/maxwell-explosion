@@ -9,7 +9,12 @@ function explodeCats() {
         "https://cdn2.thecatapi.com/images/MTY3ODIyMA.jpg",
         "https://cdn2.thecatapi.com/images/MTY3ODIxOA.jpg",
         "https://cdn2.thecatapi.com/images/MTY3ODIyMg.jpg",
-        // Ajoute plus d'URLs d'images ici si tu le souhaites
+        "https://cdn2.thecatapi.com/images/MTY3ODIxNw.jpg",
+        "https://cdn2.thecatapi.com/images/MTY3ODIyNA.jpg",
+        "https://cdn2.thecatapi.com/images/MTY3ODIyNQ.jpg",
+        "https://cdn2.thecatapi.com/images/MTY3ODIxNg.jpg",
+        "https://cdn2.thecatapi.com/images/MTY3ODIxNQ.jpg",
+        // Tu peux ajouter plus d'URLs ici si tu le souhaites
     ];
 
     // Nombre d'images de chats à afficher
