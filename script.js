@@ -1,26 +1,34 @@
-function explodeText() {
+function explodeCats() {
     const button = document.getElementById('maxwellButton');
     button.style.display = 'none';
 
-    for (let i = 0; i < 50; i++) {
-        const clone = document.createElement('div');
-        clone.className = 'maxwell-clone';
-        clone.innerText = 'Maxwell';
-        document.body.appendChild(clone);
+    // Nombre d'images de chats à afficher
+    const numCats = 30;
 
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
-        const rotation = Math.random() * 360;
-        const scale = Math.random() * 1.5 + 0.5;
+    for (let i = 0; i < numCats; i++) {
+        fetch('https://api.thecatapi.com/v1/images/search')
+            .then(response => response.json())
+            .then(data => {
+                const catImageURL = data[0].url;
+                const img = document.createElement('img');
+                img.src = catImageURL;
+                img.className = 'cat-image';
+                document.body.appendChild(img);
 
-        clone.style.left = `${x}px`;
-        clone.style.top = `${y}px`;
-        clone.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                const rotation = Math.random() * 360;
+                const scale = Math.random() * 1.5 + 0.5;
+
+                img.style.left = `${x}px`;
+                img.style.top = `${y}px`;
+                img.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+            });
     }
 
     setTimeout(() => {
-        const clones = document.querySelectorAll('.maxwell-clone');
-        clones.forEach(clone => clone.remove());
+        const images = document.querySelectorAll('.cat-image');
+        images.forEach(image => image.remove());
         button.style.display = 'block';
     }, 3000);
 }
