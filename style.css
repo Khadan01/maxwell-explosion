@@ -18,13 +18,10 @@ body {
     cursor: pointer;
 }
 
-.maxwell-clone {
+.cat-image {
     position: absolute;
-    font-size: 2em;
-    font-weight: bold;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip: text;
-    color: transparent;
+    width: 100px;
+    height: auto;
     pointer-events: none;
     animation: disappear 3s forwards;
 }
